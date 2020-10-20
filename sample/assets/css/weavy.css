@@ -1,0 +1,39 @@
+#weavy-messenger-container {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    z-index: 1000;
+    transition: transform, opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    right: 0;
+    width: 20rem;
+    transform: translateX(20rem);
+    pointer-events: none;
+}
+
+.show #weavy-messenger-container {
+    transform: none;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+#weavy-files-container {
+    width: 100%;
+    height: 500px;
+}
+
+.has-unread {
+    position: relative;
+}
+
+.has-unread::after {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    right: .5rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: #fa5c7c;
+    border-radius: 50%;
+}
